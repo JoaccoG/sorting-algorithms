@@ -9,7 +9,7 @@
 // Representation: https://upload.wikimedia.org/wikipedia/commons/9/94/Selection-Sort-Animation.gif
 // Implementation:
 
-const selectionSort = (arr: []): [] => {
+export const selectionSort = <T>(arr: T[]): T[] => {
   for (let i = 0; i < arr.length; i++) {
     let min = i;
 

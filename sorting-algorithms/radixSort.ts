@@ -17,7 +17,7 @@ const getDigit = (num: number, i: number): number =>
 const getNumberOfDigits = (num: number): number =>
   Math.floor(Math.log10(Math.abs(num))) + 1;
 
-const radixSort = (arr: number[]): number[] => {
+export const radixSort = <T extends number>(arr: T[]): T[] => {
   let maxDigits = 0;
 
   for (const el of arr) {
@@ -25,14 +25,14 @@ const radixSort = (arr: number[]): number[] => {
   }
 
   for (let i = 0; i < maxDigits; i++) {
-    const buckets: number[][] = Array.from({ length: 10 }, () => []);
+    const buckets: T[][] = Array.from({ length: 10 }, () => []);
 
     for (const el of arr) {
       const digit = getDigit(el, i);
       buckets[digit].push(el);
     }
 
-    arr = ([] as number[]).concat(...buckets);
+    arr = ([] as T[]).concat(...buckets);
   }
 
   return arr;

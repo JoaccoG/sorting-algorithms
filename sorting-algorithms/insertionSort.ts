@@ -9,7 +9,7 @@
 // Representation: https://upload.wikimedia.org/wikipedia/commons/0/0f/Insertion-sort-example-300px.gif
 // Implementation:
 
-const insertionSort = (arr: []): [] => {
+export const insertionSort = <T>(arr: T[]): T[] => {
   for (let i = 1; i < arr.length; i++) {
     const temp = arr[i];
     let j = i - 1;

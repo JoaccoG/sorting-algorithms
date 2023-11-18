@@ -11,7 +11,7 @@
 // Representation: https://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif
 // Implementation:
 
-const mergeSort = <T>(arr: T[]): T[] => {
+export const mergeSort = <T>(arr: T[]): T[] => {
   const mid = arr.length / 2;
 
   if (arr.length < 2) return arr;

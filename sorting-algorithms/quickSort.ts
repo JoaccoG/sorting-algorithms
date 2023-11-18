@@ -11,12 +11,12 @@
 // Representation: https://upload.wikimedia.org/wikipedia/commons/6/6a/Sorting_quicksort_anim.gif
 // Implementation:
 
-const swapElements = (arr: number[], i: number, j: number): void => {
+const swapElements = <T>(arr: T[], i: number, j: number): void => {
   [arr[i], arr[j]] = [arr[j], arr[i]];
 };
 
 const splitArray = <T>(
-  arr: number[],
+  arr: T[],
   left: number = 0,
   right: number = arr.length - 1
 ): number => {
@@ -34,11 +34,11 @@ const splitArray = <T>(
   return i + 1;
 };
 
-function quickSort(
-  array: number[],
+export const quickSort = <T>(
+  array: T[],
   left: number = 0,
   right: number = array.length - 1
-): number[] {
+): T[] => {
   if (left >= right) return array;
 
   const pivotIndex = splitArray(array, left, right);
@@ -46,4 +46,4 @@ function quickSort(
   quickSort(array, pivotIndex + 1, right);
 
   return array;
-}
+};
