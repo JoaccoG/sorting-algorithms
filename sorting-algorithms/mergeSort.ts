@@ -7,6 +7,7 @@
 // Online: No
 // Use cases: Large data sets (when memory is not a constraint)
 //            Linked lists
+//            External sorting
 // Representation: https://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif
 // Implementation:
 
